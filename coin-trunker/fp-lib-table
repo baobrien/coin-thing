@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name coin-trunker)(type KiCad)(uri ${KIPRJMOD}/coin-trunker.pretty)(options "")(descr ""))
+)

@@ -1,0 +1,27 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AZ850P1-x
+D American Zettler, Microminiature Polarised Dual Pole Relay Bistable
+K Miniature Polarised Relay Dual Pole Bistable
+F http://www.azettler.com/pdfs/az850.pdf
+$ENDCMP
+#
+$CMP D_Zener_SOT23_1A3K
+D Zener diode
+K diode
+F ~
+$ENDCMP
+#
+$CMP J104D2
+D American Zettler, Microminiature Polarised Dual Pole Relay
+K Miniature Polarised Relay Dual Pole
+F https://www.citrelay.com/Catalog%20Pages/RelayCatalog/J104D.pdf
+$ENDCMP
+#
+$CMP Sumida-13324-TO86
+D Transformer, single primary, single secondary
+K transformer coil magnet
+F ~
+$ENDCMP
+#
+#End Doc Library

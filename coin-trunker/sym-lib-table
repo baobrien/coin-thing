@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name coin_trunker_parts)(type Legacy)(uri ${KIPRJMOD}/coin_trunker_parts.lib)(options "")(descr ""))
+  (lib (name j104d2)(type Legacy)(uri /home/baobrien/j104d2.lib)(options "")(descr ""))
+)
