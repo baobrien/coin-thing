@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_ST_STM32F0:STM32F042F6Px U7
+L coin-trunker-rescue:STM32F042F6Px-MCU_ST_STM32F0 U7
 U 1 1 5FE0C064
 P 4650 2800
 F 0 "U7" H 4950 3600 50  0000 C CNN
@@ -25,7 +25,7 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_B_Micro J7
+L coin-trunker-rescue:USB_B_Micro-Connector J7
 U 1 1 5FE0CA19
 P 7850 2800
 F 0 "J7" H 7620 2789 50  0000 R CNN
