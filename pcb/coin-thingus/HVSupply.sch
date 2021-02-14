@@ -448,4 +448,14 @@ F 3 "~" H 6000 3400 50  0001 C CNN
 	1    6000 3400
 	1    0    0    -1  
 $EndComp
+Text Notes 8200 6200 0    39   ~ 0
+Copyright Brady O’Brien 2021\n\nThis source describes Open Hardware and is licensed under the CERN-OHL-W v2\n\nYou may redistribute and modify this documentation and make products using it under\nthe terms of the CERN-OHL-W v2 (https:/cern.ch/cern-ohl). This documentation is\ndistributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY,\nSATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the\nCERN-OHL-W v2 for applicable conditions.\n\nSource location: https://github.com/baobrien/coin-thing
+Wire Notes Line
+	8150 5450 8150 6300
+Wire Notes Line
+	8150 6300 11000 6300
+Wire Notes Line
+	11000 6300 11000 5450
+Wire Notes Line
+	11000 5450 8150 5450
 $EndSCHEMATC

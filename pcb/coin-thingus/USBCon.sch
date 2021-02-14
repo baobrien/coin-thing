@@ -395,4 +395,14 @@ Text Label 6550 2900 0    50   ~ 0
 USB_N
 Text Label 6550 2800 0    50   ~ 0
 USB_P
+Text Notes 8350 6350 0    39   ~ 0
+Copyright Brady O’Brien 2021\n\nThis source describes Open Hardware and is licensed under the CERN-OHL-W v2\n\nYou may redistribute and modify this documentation and make products using it under\nthe terms of the CERN-OHL-W v2 (https:/cern.ch/cern-ohl). This documentation is\ndistributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY,\nSATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the\nCERN-OHL-W v2 for applicable conditions.\n\nSource location: https://github.com/baobrien/coin-thing
+Wire Notes Line
+	8300 5600 8300 6450
+Wire Notes Line
+	8300 6450 11150 6450
+Wire Notes Line
+	11150 6450 11150 5600
+Wire Notes Line
+	11150 5600 8300 5600
 $EndSCHEMATC

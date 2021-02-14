@@ -298,4 +298,14 @@ Wire Wire Line
 Connection ~ 4050 2550
 Wire Wire Line
 	4050 2550 4200 2550
+Text Notes 8250 6300 0    39   ~ 0
+Copyright Brady O’Brien 2021\n\nThis source describes Open Hardware and is licensed under the CERN-OHL-W v2\n\nYou may redistribute and modify this documentation and make products using it under\nthe terms of the CERN-OHL-W v2 (https:/cern.ch/cern-ohl). This documentation is\ndistributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY,\nSATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the\nCERN-OHL-W v2 for applicable conditions.\n\nSource location: https://github.com/baobrien/coin-thing
+Wire Notes Line
+	8200 5550 8200 6400
+Wire Notes Line
+	8200 6400 11050 6400
+Wire Notes Line
+	11050 6400 11050 5550
+Wire Notes Line
+	11050 5550 8200 5550
 $EndSCHEMATC

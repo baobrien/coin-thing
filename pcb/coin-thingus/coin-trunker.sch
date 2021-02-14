@@ -46,38 +46,38 @@ Wire Wire Line
 $Comp
 L Connector:Barrel_Jack_Switch_MountingPin J4
 U 1 1 5F9413CC
-P 9850 5400
-F 0 "J4" H 9907 5717 50  0000 C CNN
-F 1 "Barrel_Jack_Switch_MountingPin" H 9907 5626 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 9900 5360 50  0001 C CNN
-F 3 "~" H 9900 5360 50  0001 C CNN
-F 4 "PJ-102AH" H 9850 5400 50  0001 C CNN "Part"
-	1    9850 5400
+P 10350 1800
+F 0 "J4" H 10407 2117 50  0000 C CNN
+F 1 "Barrel_Jack_Switch_MountingPin" H 10407 2026 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 10400 1760 50  0001 C CNN
+F 3 "~" H 10400 1760 50  0001 C CNN
+F 4 "PJ-102AH" H 10350 1800 50  0001 C CNN "Part"
+	1    10350 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 5F942022
-P 10400 5600
-F 0 "#PWR0101" H 10400 5350 50  0001 C CNN
-F 1 "GND" H 10405 5427 50  0000 C CNN
-F 2 "" H 10400 5600 50  0001 C CNN
-F 3 "" H 10400 5600 50  0001 C CNN
-	1    10400 5600
+P 10900 2000
+F 0 "#PWR0101" H 10900 1750 50  0001 C CNN
+F 1 "GND" H 10905 1827 50  0000 C CNN
+F 2 "" H 10900 2000 50  0001 C CNN
+F 3 "" H 10900 2000 50  0001 C CNN
+	1    10900 2000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10150 5400 10400 5400
+	10650 1800 10900 1800
 Wire Wire Line
-	10400 5400 10400 5500
+	10900 1800 10900 1900
 Wire Wire Line
-	10150 5500 10400 5500
-Connection ~ 10400 5500
+	10650 1900 10900 1900
+Connection ~ 10900 1900
 Wire Wire Line
-	10400 5500 10400 5600
+	10900 1900 10900 2000
 Wire Wire Line
-	10400 5300 10150 5300
-Text Label 10400 5300 2    50   ~ 0
+	10900 1700 10650 1700
+Text Label 10900 1700 2    50   ~ 0
 48V
 $Sheet
 S 1500 5350 650  750 
@@ -962,45 +962,45 @@ SCL
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5FDD0277
-P 10450 3650
-F 0 "H1" H 10550 3696 50  0000 L CNN
-F 1 "M2.5" H 10550 3605 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 10450 3650 50  0001 C CNN
-F 3 "~" H 10450 3650 50  0001 C CNN
-	1    10450 3650
+P 8050 1700
+F 0 "H1" H 8150 1746 50  0000 L CNN
+F 1 "M2.5" H 8150 1655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 8050 1700 50  0001 C CNN
+F 3 "~" H 8050 1700 50  0001 C CNN
+	1    8050 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5FDDD6B4
-P 10450 3850
-F 0 "H2" H 10550 3896 50  0000 L CNN
-F 1 "M2.5" H 10550 3805 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 10450 3850 50  0001 C CNN
-F 3 "~" H 10450 3850 50  0001 C CNN
-	1    10450 3850
+P 8050 1900
+F 0 "H2" H 8150 1946 50  0000 L CNN
+F 1 "M2.5" H 8150 1855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 8050 1900 50  0001 C CNN
+F 3 "~" H 8050 1900 50  0001 C CNN
+	1    8050 1900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 5FDDDD20
-P 10450 4050
-F 0 "H3" H 10550 4096 50  0000 L CNN
-F 1 "M2.5" H 10550 4005 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 10450 4050 50  0001 C CNN
-F 3 "~" H 10450 4050 50  0001 C CNN
-	1    10450 4050
+P 7650 1700
+F 0 "H3" H 7750 1746 50  0000 L CNN
+F 1 "M2.5" H 7750 1655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 7650 1700 50  0001 C CNN
+F 3 "~" H 7650 1700 50  0001 C CNN
+	1    7650 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 5FDDDF7B
-P 10450 4250
-F 0 "H4" H 10550 4296 50  0000 L CNN
-F 1 "M2.5" H 10550 4205 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 10450 4250 50  0001 C CNN
-F 3 "~" H 10450 4250 50  0001 C CNN
-	1    10450 4250
+P 7650 1900
+F 0 "H4" H 7750 1946 50  0000 L CNN
+F 1 "M2.5" H 7750 1855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 7650 1900 50  0001 C CNN
+F 3 "~" H 7650 1900 50  0001 C CNN
+	1    7650 1900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1110,4 +1110,14 @@ Text Label 3000 3650 0    50   ~ 0
 COIN_TEST
 Wire Wire Line
 	3000 3650 3650 3650
+Text Notes 8050 6200 0    39   ~ 0
+Copyright Brady O’Brien 2021\n\nThis source describes Open Hardware and is licensed under the CERN-OHL-W v2\n\nYou may redistribute and modify this documentation and make products using it under\nthe terms of the CERN-OHL-W v2 (https:/cern.ch/cern-ohl). This documentation is\ndistributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY,\nSATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the\nCERN-OHL-W v2 for applicable conditions.\n\nSource location: https://github.com/baobrien/coin-thing
+Wire Notes Line
+	8000 5450 8000 6300
+Wire Notes Line
+	8000 6300 10850 6300
+Wire Notes Line
+	10850 6300 10850 5450
+Wire Notes Line
+	10850 5450 8000 5450
 $EndSCHEMATC
