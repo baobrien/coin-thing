@@ -1,2 +1,3 @@
-coin-trunker/gerber/
-
+pcb/coin-thingus/gerber/
+pcb/coin-thingus/fp-info-cache
+*-bak
