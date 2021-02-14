@@ -1,4 +1,4 @@
-18511279755251420
+18514506323652420
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -80920,6 +80920,13 @@ varistor SIOV
 2
 2
 coin-trunker
+6P6C_THT
+
+
+0
+6
+6
+coin-trunker
 RJ12_Molex_95501-6669
 RJ12 connector 
 RJ12 connector
@@ -80933,6 +80940,13 @@ Sumida 10-pin SMT transformer
 0
 10
 10
+coin-trunker
+USB_Micro-B_Molex-105017-0001
+http://www.molex.com/pdm_docs/sd/1050170001_sd.pdf
+Micro-USB SMD Typ-B
+0
+13
+6
 coin-trunker
 phone_image
 

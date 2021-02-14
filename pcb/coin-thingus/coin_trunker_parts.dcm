@@ -18,6 +18,12 @@ K Miniature Polarised Relay Dual Pole
 F https://www.citrelay.com/Catalog%20Pages/RelayCatalog/J104D.pdf
 $ENDCMP
 #
+$CMP LTV-217
+D DC Quad Optocoupler, Vce 80V, CTR 100-600%, SOP-16
+K NPN DC Quad Optocoupler
+F http://optoelectronics.liteon.com/upload/download/DS70-2009-0014/LTV-2X7%20sereis%20Mar17.PDF
+$ENDCMP
+#
 $CMP Sumida-13324-TO86
 D Transformer, single primary, single secondary
 K transformer coil magnet

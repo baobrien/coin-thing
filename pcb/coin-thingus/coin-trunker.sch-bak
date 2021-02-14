@@ -21,7 +21,7 @@ Wire Wire Line
 	2250 1300 2350 1300
 Wire Wire Line
 	2350 1700 2250 1700
-Text Label 3300 1600 2    50   ~ 0
+Text Label 3250 1800 2    50   ~ 0
 T_COIN
 Wire Wire Line
 	4850 1300 5650 1300
@@ -162,7 +162,7 @@ U 1 1 5FAC4CEA
 P 2350 3150
 F 0 "U1" H 2350 3817 50  0000 C CNN
 F 1 "ULN2003LV" H 2350 3726 50  0000 C CNN
-F 2 "Package_SO:SOIC-16W_5.3x10.2mm_P1.27mm" H 2400 2600 50  0001 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2400 2600 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 2450 2950 50  0001 C CNN
 	1    2350 3150
 	-1   0    0    -1  
@@ -322,34 +322,12 @@ Wire Wire Line
 Wire Wire Line
 	2250 1550 2250 1700
 $Comp
-L Isolator:ILD74 U5
-U 1 1 5FBB4DF0
-P 5950 2400
-F 0 "U5" H 5950 2725 50  0000 C CNN
-F 1 "ILD74" H 5950 2634 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 5750 2200 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83640/ild74.pdf" H 5950 2400 50  0001 L CNN
-	1    5950 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Isolator:ILD74 U5
-U 2 1 5FBB5638
-P 5950 2950
-F 0 "U5" H 5950 3275 50  0000 C CNN
-F 1 "ILD74" H 5950 3184 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 5750 2750 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83640/ild74.pdf" H 5950 2950 50  0001 L CNN
-	2    5950 2950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_US R10
 U 1 1 5FBB6E50
 P 3750 2250
 F 0 "R10" V 3545 2250 50  0000 C CNN
 F 1 "120 2W" V 3636 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0612_1632Metric" V 3790 2240 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3790 2240 50  0001 C CNN
 F 3 "~" H 3750 2250 50  0001 C CNN
 	1    3750 2250
 	0    1    1    0   
@@ -465,18 +443,6 @@ Text Label 7350 2300 2    50   ~ 0
 OFF_HOOK_F
 Text Label 7350 2850 2    50   ~ 0
 OFF_HOOK_R
-Wire Wire Line
-	3450 1400 3450 1200
-Wire Wire Line
-	3450 1200 4250 1200
-Wire Wire Line
-	2950 1400 3450 1400
-Wire Wire Line
-	4250 1600 3400 1600
-Wire Wire Line
-	3400 1600 3400 1800
-Wire Wire Line
-	2950 1800 3400 1800
 Wire Wire Line
 	3350 6200 3550 6200
 Wire Wire Line
@@ -666,7 +632,7 @@ U 1 1 5FE20B70
 P 1900 6850
 F 0 "J5" H 1818 6525 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" H 1818 6616 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" H 1900 6850 50  0001 C CNN
+F 2 "" H 1900 6850 50  0001 C CNN
 F 3 "~" H 1900 6850 50  0001 C CNN
 F 4 "1725656" H 1900 6850 50  0001 C CNN "Part"
 	1    1900 6850
@@ -702,9 +668,6 @@ NoConn ~ 1950 3350
 NoConn ~ 1950 3450
 NoConn ~ 1350 1350
 NoConn ~ 1350 1650
-Wire Wire Line
-	3300 1600 2950 1600
-NoConn ~ 2950 1200
 NoConn ~ 5650 1200
 NoConn ~ 5650 1500
 Wire Wire Line
@@ -1005,25 +968,12 @@ F 3 "~" H 7650 1900 50  0001 C CNN
 $EndComp
 $Comp
 L Relay:IM00 K?
-U 1 1 5FE20380
-P 2650 1300
-AR Path="/5FA767FA/5FE20380" Ref="K?"  Part="1" 
-AR Path="/5FE20380" Ref="K1"  Part="1" 
-F 0 "K1" V 1883 1300 50  0000 C CNN
-F 1 "AGQ200A4" V 1974 1300 50  0000 C CNN
-F 2 "Relay_SMD:Relay_DPDT_Omron_G6K-2F-Y" H 2450 1300 50  0001 C CNN
-F 3 "" H 2450 1300 50  0001 C CNN
-	1    2650 1300
-	0    1    1    0   
-$EndComp
-$Comp
-L Relay:IM00 K?
 U 1 1 5FE2C154
 P 4550 1300
 AR Path="/5FA767FA/5FE2C154" Ref="K?"  Part="1" 
 AR Path="/5FE2C154" Ref="K2"  Part="1" 
 F 0 "K2" V 3783 1300 50  0000 C CNN
-F 1 "AGQ200A4" V 3874 1300 50  0000 C CNN
+F 1 "HFD4/5-S" V 3874 1300 50  0000 C CNN
 F 2 "Relay_SMD:Relay_DPDT_Omron_G6K-2F-Y" H 4350 1300 50  0001 C CNN
 F 3 "" H 4350 1300 50  0001 C CNN
 	1    4550 1300
@@ -1120,4 +1070,45 @@ Wire Notes Line
 	10850 6300 10850 5450
 Wire Notes Line
 	10850 5450 8000 5450
+$Comp
+L Relay:IM00 K?
+U 1 1 5FE20380
+P 2650 1300
+AR Path="/5FA767FA/5FE20380" Ref="K?"  Part="1" 
+AR Path="/5FE20380" Ref="K1"  Part="1" 
+F 0 "K1" V 1883 1300 50  0000 C CNN
+F 1 "HFD4/5-S" V 1974 1300 50  0000 C CNN
+F 2 "Relay_SMD:Relay_DPDT_Omron_G6K-2F-Y" H 2450 1300 50  0001 C CNN
+F 3 "" H 2450 1300 50  0001 C CNN
+	1    2650 1300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 1200 4250 1200
+Wire Wire Line
+	2950 1600 4250 1600
+Wire Wire Line
+	3250 1800 2950 1800
+$Comp
+L coin_trunker_parts:LTV-217 U5
+U 1 1 6033624A
+P 5950 2400
+F 0 "U5" H 5950 2725 50  0000 C CNN
+F 1 "LTV-217" H 5950 2634 50  0000 C CNN
+F 2 "Package_SO:SOP-4_4.4x2.6mm_P1.27mm" H 5750 2200 50  0001 L CIN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2009-0014/LTV-2X7%20sereis%20Mar17.PDF" H 5950 2400 50  0001 L CNN
+	1    5950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L coin_trunker_parts:LTV-217 U8
+U 1 1 6033877C
+P 5950 2950
+F 0 "U8" H 5950 3275 50  0000 C CNN
+F 1 "LTV-217" H 5950 3184 50  0000 C CNN
+F 2 "Package_SO:SOP-4_4.4x2.6mm_P1.27mm" H 5750 2750 50  0001 L CIN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2009-0014/LTV-2X7%20sereis%20Mar17.PDF" H 5950 2950 50  0001 L CNN
+	1    5950 2950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -18,4 +18,10 @@ K Miniature Polarised Relay Dual Pole
 F https://www.citrelay.com/Catalog%20Pages/RelayCatalog/J104D.pdf
 $ENDCMP
 #
+$CMP Sumida-13324-TO86
+D Transformer, single primary, single secondary
+K transformer coil magnet
+F ~
+$ENDCMP
+#
 #End Doc Library
