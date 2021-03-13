@@ -16,40 +16,30 @@ $EndDescr
 $Comp
 L Device:D D?
 U 1 1 5FA47F8C
-P 6800 3200
+P 6800 3600
 AR Path="/5FA47F8C" Ref="D?"  Part="1" 
 AR Path="/5FA3EC89/5FA47F8C" Ref="D3"  Part="1" 
-F 0 "D3" H 6800 2984 50  0000 C CNN
-F 1 " CMMR1U-06" H 6800 3075 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123F" H 6800 3200 50  0001 C CNN
-F 3 "~" H 6800 3200 50  0001 C CNN
-F 4 " CMMR1U-06" H 6800 3200 50  0001 C CNN "Part"
-	1    6800 3200
+F 0 "D3" H 6800 3384 50  0000 C CNN
+F 1 " CMMR1U-06" H 6950 3500 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 6800 3600 50  0001 C CNN
+F 3 "~" H 6800 3600 50  0001 C CNN
+F 4 " CMMR1U-06" H 6800 3600 50  0001 C CNN "Part"
+	1    6800 3600
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6400 3200 6650 3200
 $Comp
 L Device:CP1 C?
 U 1 1 5FA47F93
-P 7250 3400
+P 7650 3400
 AR Path="/5FA47F93" Ref="C?"  Part="1" 
 AR Path="/5FA3EC89/5FA47F93" Ref="C4"  Part="1" 
-F 0 "C4" H 7365 3446 50  0000 L CNN
-F 1 "1u" H 7365 3355 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 7250 3400 50  0001 C CNN
-F 3 "~" H 7250 3400 50  0001 C CNN
-	1    7250 3400
-	1    0    0    -1  
+F 0 "C4" H 7765 3446 50  0000 L CNN
+F 1 "1u" H 7765 3355 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 7650 3400 50  0001 C CNN
+F 3 "~" H 7650 3400 50  0001 C CNN
+	1    7650 3400
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6950 3200 7250 3200
-Wire Wire Line
-	7250 3200 7250 3250
-Wire Wire Line
-	6400 3600 7250 3600
-Wire Wire Line
-	7250 3600 7250 3550
 $Comp
 L Device:R_US R?
 U 1 1 5FA47F9D
@@ -279,11 +269,10 @@ P 4550 2850
 AR Path="/5FA4800E" Ref="D?"  Part="1" 
 AR Path="/5FA3EC89/5FA4800E" Ref="D2"  Part="1" 
 F 0 "D2" V 4550 2750 50  0000 C CNN
-F 1 "DFLS1150-7" H 4550 2950 50  0000 C CNN
+F 1 "DFLS1150-7" H 4550 2950 50  0001 C CNN
 F 2 "Diode_SMD:D_PowerDI-123" H 4550 2850 50  0001 C CNN
 F 3 "~" H 4550 2850 50  0001 C CNN
-F 4 " CMMR1U-06" H 4550 2850 50  0001 C CNN "Part"
-F 5 "DFLS1150-7" V 4550 2850 50  0001 C CNN "part"
+F 4 "" H 4550 2850 50  0001 C CNN "Part"
 	1    4550 2850
 	0    1    1    0   
 $EndComp
@@ -307,9 +296,9 @@ Wire Wire Line
 Connection ~ 4750 3600
 Wire Wire Line
 	4750 3600 4900 3600
-Text Label 7250 3200 2    50   ~ 0
+Text Label 7700 3600 0    50   ~ 0
 HV_P
-Text Label 7250 3600 2    50   ~ 0
+Text Label 7700 3200 0    50   ~ 0
 HV_N
 Text Label 3150 3600 0    50   ~ 0
 HV_EN
@@ -337,9 +326,9 @@ Wire Wire Line
 	3100 3600 3650 3600
 Text HLabel 2450 3200 0    50   Input ~ 0
 VIN
-Text HLabel 7550 3150 2    50   Output ~ 0
+Text HLabel 7950 3600 2    50   Output ~ 0
 VOUT_P
-Text HLabel 7550 3600 2    50   Output ~ 0
+Text HLabel 7950 3200 2    50   Output ~ 0
 VOUT_N
 Text HLabel 2450 3700 0    50   Input ~ 0
 GND
@@ -361,34 +350,6 @@ Wire Wire Line
 	2450 3200 2750 3200
 Connection ~ 2750 3200
 Wire Wire Line
-	7550 3600 7250 3600
-Connection ~ 7250 3600
-Wire Wire Line
-	7550 3150 7250 3150
-Wire Wire Line
-	7250 3150 7250 3200
-Connection ~ 7250 3200
-$Comp
-L Device:R_POT_TRIM_US RV1
-U 1 1 5FD8194F
-P 5500 3850
-F 0 "RV1" H 5433 3804 50  0000 R CNN
-F 1 "100K" H 5750 3750 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_3224X_Vertical" H 5500 3850 50  0001 C CNN
-F 3 "~" H 5500 3850 50  0001 C CNN
-F 4 "ST4ETB104" H 5500 3850 50  0001 C CNN "Part"
-	1    5500 3850
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	5650 3850 5750 3850
-Wire Wire Line
-	5750 3850 5750 4100
-Wire Wire Line
-	5750 4100 5500 4100
-Wire Wire Line
-	5500 4100 5500 4000
-Wire Wire Line
 	4500 3700 5250 3700
 Wire Wire Line
 	5250 3700 5250 4600
@@ -398,34 +359,28 @@ Wire Wire Line
 	5500 4600 5500 4500
 Wire Wire Line
 	5500 4100 5500 4200
-Connection ~ 5500 4100
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5FD94D5D
-P 7250 3050
-F 0 "TP1" H 7308 3168 50  0000 L CNN
-F 1 "TestPoint" H 7308 3077 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.0mm_L10.0mm" H 7450 3050 50  0001 C CNN
-F 3 "~" H 7450 3050 50  0001 C CNN
-	1    7250 3050
-	1    0    0    -1  
+P 7650 3750
+F 0 "TP1" H 7708 3868 50  0000 L CNN
+F 1 "TestPoint" H 7708 3777 50  0000 L CNN
+F 2 "Connector_Pin:Pin_D1.0mm_L10.0mm" H 7850 3750 50  0001 C CNN
+F 3 "~" H 7850 3750 50  0001 C CNN
+	1    7650 3750
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	7250 3050 7250 3150
-Connection ~ 7250 3150
 $Comp
 L Connector:TestPoint TP2
 U 1 1 5FD96635
-P 7250 3700
-F 0 "TP2" H 7192 3726 50  0000 R CNN
-F 1 "TestPoint" H 7192 3817 50  0000 R CNN
-F 2 "Connector_Pin:Pin_D1.0mm_L10.0mm" H 7450 3700 50  0001 C CNN
-F 3 "~" H 7450 3700 50  0001 C CNN
-	1    7250 3700
-	-1   0    0    1   
+P 7650 3100
+F 0 "TP2" H 7592 3126 50  0000 R CNN
+F 1 "TestPoint" H 7592 3217 50  0000 R CNN
+F 2 "Connector_Pin:Pin_D1.0mm_L10.0mm" H 7850 3100 50  0001 C CNN
+F 3 "~" H 7850 3100 50  0001 C CNN
+	1    7650 3100
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7250 3700 7250 3600
 $Comp
 L coin_trunker_parts:LT8304 U2
 U 1 1 5FDBECF1
@@ -458,4 +413,66 @@ Wire Notes Line
 	11000 6300 11000 5450
 Wire Notes Line
 	11000 5450 8150 5450
+Wire Wire Line
+	7650 3200 7650 3250
+Wire Wire Line
+	7650 3750 7650 3600
+Connection ~ 7650 3600
+Wire Wire Line
+	7650 3600 7650 3550
+Wire Wire Line
+	6650 3600 6400 3600
+Wire Wire Line
+	7950 3200 7650 3200
+Connection ~ 7650 3200
+Wire Wire Line
+	7950 3600 7650 3600
+Wire Wire Line
+	7650 3200 7650 3100
+Wire Wire Line
+	5750 4100 5500 4100
+Wire Wire Line
+	5650 3850 5750 3850
+Wire Wire Line
+	5750 3850 5750 4100
+Connection ~ 5500 4100
+Wire Wire Line
+	5500 4100 5500 4000
+$Comp
+L Device:R_POT_TRIM_US RV1
+U 1 1 5FD8194F
+P 5500 3850
+F 0 "RV1" H 5433 3804 50  0000 R CNN
+F 1 "100K" H 5750 3750 50  0000 R CNN
+F 2 "Potentiometer_SMD:Potentiometer_Bourns_3224X_Vertical" H 5500 3850 50  0001 C CNN
+F 3 "~" H 5500 3850 50  0001 C CNN
+F 4 "ST4ETB104" H 5500 3850 50  0001 C CNN "Part"
+	1    5500 3850
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 6057A993
+P 7150 3400
+F 0 "C12" H 7350 3300 50  0000 R CNN
+F 1 ".1u" H 7300 3500 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 7188 3250 50  0001 C CNN
+F 3 "~" H 7150 3400 50  0001 C CNN
+	1    7150 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7150 3600 7150 3550
+Wire Wire Line
+	7150 3600 7650 3600
+Wire Wire Line
+	7150 3600 6950 3600
+Connection ~ 7150 3600
+Wire Wire Line
+	6400 3200 7150 3200
+Wire Wire Line
+	7150 3250 7150 3200
+Connection ~ 7150 3200
+Wire Wire Line
+	7150 3200 7650 3200
 $EndSCHEMATC

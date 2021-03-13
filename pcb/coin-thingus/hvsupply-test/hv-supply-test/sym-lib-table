@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name coin_trunker_parts)(type Legacy)(uri /home/baobrien/workspace/coin-thing/pcb/coin-thingus/coin_trunker_parts.lib)(options "")(descr ""))
+)
