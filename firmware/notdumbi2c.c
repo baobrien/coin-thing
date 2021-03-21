@@ -61,8 +61,9 @@ extern int nack_flag;
  */
 bool i2c_transfer7_nodumb(uint32_t i2c, uint8_t addr, uint8_t * w, size_t wn, uint8_t * r, size_t rn)
 {
+    I2C_ICR(i2c) = 0x0010;
     /*  waiting for busy is unnecessary. read the RM */
-
+    uint64_t transfer_start_time = time_ms();
     if (wn) {
         i2c_set_7bit_address(i2c, addr);
         i2c_set_write_transfer_dir(i2c);

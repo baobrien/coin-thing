@@ -53,7 +53,7 @@ L Device:R_US R7
 U 1 1 5FA81FF6
 P 7850 2500
 F 0 "R7" H 7918 2546 50  0000 L CNN
-F 1 "3600R 2W" H 7918 2455 50  0000 L CNN
+F 1 "3.6K" H 7918 2455 50  0000 L CNN
 F 2 "Resistor_SMD:R_2010_5025Metric" V 7890 2490 50  0001 C CNN
 F 3 "~" H 7850 2500 50  0001 C CNN
 F 4 "2010W2J0392T4S" H 7850 2500 50  0001 C CNN "Part"
@@ -183,8 +183,6 @@ Wire Wire Line
 Wire Wire Line
 	4400 4000 4400 3600
 Connection ~ 4400 3600
-Wire Wire Line
-	2800 3350 2900 3350
 Text HLabel 9350 3000 2    50   Input ~ 0
 GND
 Wire Wire Line
@@ -203,17 +201,6 @@ Wire Wire Line
 Wire Wire Line
 	6450 2650 7300 2650
 $Comp
-L Connector:TestPoint TP4
-U 1 1 5FD99F71
-P 2900 3450
-F 0 "TP4" H 2842 3476 50  0000 R CNN
-F 1 "TestPoint" H 2842 3567 50  0000 R CNN
-F 2 "Connector_Pin:Pin_D1.0mm_L10.0mm" H 3100 3450 50  0001 C CNN
-F 3 "~" H 3100 3450 50  0001 C CNN
-	1    2900 3450
-	-1   0    0    1   
-$EndComp
-$Comp
 L Connector:TestPoint TP3
 U 1 1 5FD9A364
 P 2900 2850
@@ -229,11 +216,6 @@ Wire Wire Line
 Connection ~ 2900 2950
 Wire Wire Line
 	2900 2950 2800 2950
-Wire Wire Line
-	2900 3350 2900 3450
-Connection ~ 2900 3350
-Wire Wire Line
-	2900 3350 3200 3350
 $Comp
 L Device:D_Zener D8
 U 1 1 5FD9D357
@@ -308,4 +290,6 @@ F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2009-0014/LTV-2X7%20
 	1    8350 2900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2800 3350 3200 3350
 $EndSCHEMATC

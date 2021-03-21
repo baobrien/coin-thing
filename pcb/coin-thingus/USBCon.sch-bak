@@ -418,7 +418,7 @@ Wire Wire Line
 Wire Wire Line
 	2400 2500 1950 2500
 Wire Wire Line
-	2400 3000 4050 3000
+	2400 3000 2750 3000
 Wire Wire Line
 	1150 2500 1550 2500
 Text Label 2100 2050 2    50   ~ 0
@@ -443,7 +443,7 @@ $EndComp
 Text Notes 1200 3500 0    50   ~ 0
 I2C 'Level Converters' \nto isolate MCU from RPI\n
 Wire Wire Line
-	1950 3100 4050 3100
+	1950 3100 3100 3100
 Wire Wire Line
 	1150 3100 1550 3100
 Wire Wire Line
@@ -542,4 +542,44 @@ F 3 "" H 6450 1800 50  0001 C CNN
 	1    6450 1800
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_US R29
+U 1 1 60525D10
+P 2750 2650
+F 0 "R29" H 2818 2696 50  0000 L CNN
+F 1 "10k" H 2818 2605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2790 2640 50  0001 C CNN
+F 3 "~" H 2750 2650 50  0001 C CNN
+	1    2750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R30
+U 1 1 605261A3
+P 3100 2650
+F 0 "R30" H 3168 2696 50  0000 L CNN
+F 1 "10k" H 3168 2605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3140 2640 50  0001 C CNN
+F 3 "~" H 3100 2650 50  0001 C CNN
+	1    3100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2800 2750 3000
+Connection ~ 2750 3000
+Wire Wire Line
+	2750 3000 4050 3000
+Wire Wire Line
+	3100 2800 3100 3100
+Connection ~ 3100 3100
+Wire Wire Line
+	3100 3100 4050 3100
+Text Label 3000 2400 2    50   ~ 0
+3V3M
+Wire Wire Line
+	2750 2400 3100 2400
+Wire Wire Line
+	3100 2400 3100 2500
+Wire Wire Line
+	2750 2400 2750 2500
 $EndSCHEMATC

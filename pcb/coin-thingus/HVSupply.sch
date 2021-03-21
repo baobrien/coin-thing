@@ -33,8 +33,8 @@ U 1 1 5FA47F93
 P 7650 3400
 AR Path="/5FA47F93" Ref="C?"  Part="1" 
 AR Path="/5FA3EC89/5FA47F93" Ref="C4"  Part="1" 
-F 0 "C4" H 7765 3446 50  0000 L CNN
-F 1 "1u" H 7765 3355 50  0000 L CNN
+F 0 "C4" H 7450 3450 50  0000 L CNN
+F 1 "1u" H 7450 3350 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 7650 3400 50  0001 C CNN
 F 3 "~" H 7650 3400 50  0001 C CNN
 	1    7650 3400
@@ -43,14 +43,14 @@ $EndComp
 $Comp
 L Device:R_US R?
 U 1 1 5FA47F9D
-P 5500 4350
+P 5500 3850
 AR Path="/5FA47F9D" Ref="R?"  Part="1" 
 AR Path="/5FA3EC89/5FA47F9D" Ref="R6"  Part="1" 
-F 0 "R6" H 5568 4396 50  0000 L CNN
-F 1 "260k" H 5568 4305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5540 4340 50  0001 C CNN
-F 3 "~" H 5500 4350 50  0001 C CNN
-	1    5500 4350
+F 0 "R6" H 5568 3896 50  0000 L CNN
+F 1 "260k" H 5568 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5540 3840 50  0001 C CNN
+F 3 "~" H 5500 3850 50  0001 C CNN
+	1    5500 3850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -66,41 +66,8 @@ F 3 "~" H 5000 4000 50  0001 C CNN
 	1    5000 4000
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:R_US R?
-U 1 1 5FA47FA9
-P 4700 4000
-AR Path="/5FA47FA9" Ref="R?"  Part="1" 
-AR Path="/5FA3EC89/5FA47FA9" Ref="R3"  Part="1" 
-F 0 "R3" H 4632 3954 50  0000 R CNN
-F 1 "100k" H 4632 4045 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4740 3990 50  0001 C CNN
-F 3 "~" H 4700 4000 50  0001 C CNN
-	1    4700 4000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5500 3700 5500 3600
-Connection ~ 5500 3600
-Wire Wire Line
-	5500 3600 5600 3600
-Wire Wire Line
-	4500 3800 4700 3800
-Wire Wire Line
-	4700 3800 4700 3850
-Wire Wire Line
-	4500 3900 4550 3900
-Wire Wire Line
-	4550 3900 4550 4250
-Wire Wire Line
-	4550 4250 4700 4250
-Wire Wire Line
-	4700 4250 4700 4150
-Wire Wire Line
-	4700 3800 5000 3800
 Wire Wire Line
 	5000 3800 5000 3850
-Connection ~ 4700 3800
 $Comp
 L power:GND #PWR?
 U 1 1 5FA47FBE
@@ -243,8 +210,6 @@ Wire Wire Line
 	4900 3000 4900 3600
 Connection ~ 4900 3600
 Wire Wire Line
-	4900 3600 5500 3600
-Wire Wire Line
 	5250 3000 5250 3200
 Connection ~ 5250 3200
 Wire Wire Line
@@ -351,14 +316,6 @@ Wire Wire Line
 Connection ~ 2750 3200
 Wire Wire Line
 	4500 3700 5250 3700
-Wire Wire Line
-	5250 3700 5250 4600
-Wire Wire Line
-	5250 4600 5500 4600
-Wire Wire Line
-	5500 4600 5500 4500
-Wire Wire Line
-	5500 4100 5500 4200
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5FD94D5D
@@ -401,7 +358,7 @@ F 1 "Sumida-13324-TO86" H 6000 3690 50  0000 C CNN
 F 2 "coin-trunker:SUMIDA-S-074-1511" H 6000 3400 50  0001 C CNN
 F 3 "~" H 6000 3400 50  0001 C CNN
 	1    6000 3400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Text Notes 8200 6200 0    39   ~ 0
 Copyright Brady O’Brien 2021\n\nThis source describes Open Hardware and is licensed under the CERN-OHL-W v2\n\nYou may redistribute and modify this documentation and make products using it under\nthe terms of the CERN-OHL-W v2 (https:/cern.ch/cern-ohl). This documentation is\ndistributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY,\nSATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the\nCERN-OHL-W v2 for applicable conditions.\n\nSource location: https://github.com/baobrien/coin-thing
@@ -429,27 +386,6 @@ Wire Wire Line
 	7950 3600 7650 3600
 Wire Wire Line
 	7650 3200 7650 3100
-Wire Wire Line
-	5750 4100 5500 4100
-Wire Wire Line
-	5650 3850 5750 3850
-Wire Wire Line
-	5750 3850 5750 4100
-Connection ~ 5500 4100
-Wire Wire Line
-	5500 4100 5500 4000
-$Comp
-L Device:R_POT_TRIM_US RV1
-U 1 1 5FD8194F
-P 5500 3850
-F 0 "RV1" H 5433 3804 50  0000 R CNN
-F 1 "100K" H 5750 3750 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_3224X_Vertical" H 5500 3850 50  0001 C CNN
-F 3 "~" H 5500 3850 50  0001 C CNN
-F 4 "ST4ETB104" H 5500 3850 50  0001 C CNN "Part"
-	1    5500 3850
-	1    0    0    1   
-$EndComp
 $Comp
 L Device:C C12
 U 1 1 6057A993
@@ -459,12 +395,10 @@ F 1 ".1u" H 7300 3500 50  0000 R CNN
 F 2 "Capacitor_SMD:C_1210_3225Metric" H 7188 3250 50  0001 C CNN
 F 3 "~" H 7150 3400 50  0001 C CNN
 	1    7150 3400
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	7150 3600 7150 3550
-Wire Wire Line
-	7150 3600 7650 3600
 Wire Wire Line
 	7150 3600 6950 3600
 Connection ~ 7150 3600
@@ -474,5 +408,45 @@ Wire Wire Line
 	7150 3250 7150 3200
 Connection ~ 7150 3200
 Wire Wire Line
-	7150 3200 7650 3200
+	7150 3200 7350 3200
+Wire Wire Line
+	4900 3600 5500 3600
+Wire Wire Line
+	5500 4000 5500 4100
+Wire Wire Line
+	5500 4100 5250 4100
+Wire Wire Line
+	5250 4100 5250 3700
+Wire Wire Line
+	5500 3700 5500 3600
+Connection ~ 5500 3600
+Wire Wire Line
+	5500 3600 5600 3600
+Wire Wire Line
+	4500 3800 5000 3800
+$Comp
+L Device:R_US R?
+U 1 1 609006DB
+P 7350 3400
+AR Path="/609006DB" Ref="R?"  Part="1" 
+AR Path="/5FA3EC89/609006DB" Ref="R3"  Part="1" 
+F 0 "R3" H 7418 3446 50  0000 L CNN
+F 1 "130k" H 7400 3300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7390 3390 50  0001 C CNN
+F 3 "~" H 7350 3400 50  0001 C CNN
+	1    7350 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3550 7350 3600
+Wire Wire Line
+	7150 3600 7350 3600
+Connection ~ 7350 3600
+Wire Wire Line
+	7350 3600 7650 3600
+Wire Wire Line
+	7350 3250 7350 3200
+Connection ~ 7350 3200
+Wire Wire Line
+	7350 3200 7650 3200
 $EndSCHEMATC

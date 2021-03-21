@@ -8,31 +8,6 @@
 #include "gpio_tca9534a.h"
 #include "localsystick.h"
 
-// typedef struct _cointhing cointhing;
-// typedef struct _cointhing_channel cointhing_channel;
-
-// struct _cointhing {
-//     ggpio_pin enable_hv; // HV supply enable/disable
-//     ggpio_pin coin_tc_polarity; // Relay to select +/- coin test/collect polarity
-//     ggpio_pin coin_tc_voltage; // Relay to select between high and low voltage
-//     ggpio_pin coin_test_read; // Input from coin_test opto
-//     size_t n_channels;  // How many channels for this cointhing
-//     cointhing_channel* channel; // Pointer to list of coin thing channels
-
-//     uint32_t relay_delay_ms; // How long to wait for relays to switch
-//     uint32_t hvsupply_powerup; // How long to wait for the HV supply to power up
-//     uint32_t coin_test_time; // How long to do the coin test
-//     uint32_t coin_rc_time; // How long to return/collect
-// };
-
-// struct _cointhing_channel {
-//     ggpio_pin co_oh_hold; // Relay to hold CO off hook
-//     ggpio_pin phone_co_test; // Relay to select between coin control and phone->line
-//     ggpio_pin offhook_fwd; // Opto to check for off-hook in forward polarity
-//     ggpio_pin offhook_rev; // Opto to check for off-hook in reverse polarity
-//     size_t ch_index;
-//     cointhing* ct;
-// };
 
 void ct_ch_default(cointhing_channel * ch)
 {
@@ -58,7 +33,7 @@ void ct_init_cointhingusv1(cointhing * ct, ggpio_dev * tca9534)
 
     ct->relay_delay_ms = 10;
     ct->hvsupply_powerup = 250;
-    ct->coin_test_time = 50;
+    ct->coin_test_time = 1;
     ct->coin_rc_time = 250;
 
     cointhing_channel *ch = &ct->channels[0];
@@ -101,7 +76,7 @@ static bool ct_do_coin_thing(cointhing_channel * ch, bool dotest, bool polarity)
     ggpio_clear(&(ch->phone_co_test));  // Hook phone up to test/collect voltage
     delayms(ch->ct->relay_delay_ms);  // Relay settling
     if (dotest) {
-        delayms(ch->ct->coin_test_time);  // Wait before testin
+        delayms(ch->ct->coin_test_time);  // Wait before testing
         rv = !ggpio_read(&(ch->ct->coin_test_read));
         // Reset relays normal
     } else {

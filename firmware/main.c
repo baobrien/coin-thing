@@ -33,14 +33,6 @@
 #include "gpio_tca9534a.h"
 #include "cointhingus.h"
 
-int nack_flag = 0;
-
-inline static void dumbdelay(uint32_t howlong)
-{
-    for (uint32_t i = howlong; i; i--)
-        __asm__("nop");
-}
-
 int main(void)
 {
     int i;
@@ -60,34 +52,9 @@ int main(void)
     cointhing_channel *ch;
     ct_init_cointhingusv1(&coin, &tca9534);
     ch = &coin.channels[0];
-    // ggpio_get_pin_tca9534(&tca9534, &coin_pol, GPIO0);
-    // ggpio_get_pin_tca9534(&tca9534, &coin_test, GPIO1);
-    // ggpio_get_pin_tca9534(&tca9534, &co_hold, GPIO2);
-    // ggpio_get_pin_tca9534(&tca9534, &fxs_to_coin_1, GPIO3);
-    // ggpio_direction(&coin_pol, GGPIO_DIR_OUTPUT);
-    // ggpio_direction(&coin_test, GGPIO_DIR_OUTPUT);
-    // ggpio_direction(&co_hold, GGPIO_DIR_OUTPUT);
-    // ggpio_direction(&fxs_to_coin_1, GGPIO_DIR_OUTPUT);
-    // ggpio_tca9534_set_invert(&fxs_to_coin_1, GGPIO_TCA9534_INVERT);
 
+    
     while (1) {
-        // dumbdelay(0x80000);
-        // ggpio_set(&coin_pol);
-        // dumbdelay(0x80000);
-        // ggpio_set(&coin_test);
-        // dumbdelay(0x80000);
-        // ggpio_set(&co_hold);
-        // dumbdelay(0x80000);
-        // ggpio_set(&fxs_to_coin_1);
-
-        // dumbdelay(0x80000);
-        // ggpio_clear(&coin_pol);
-        // dumbdelay(0x80000);
-        // ggpio_clear(&coin_test);
-        // dumbdelay(0x80000);
-        // ggpio_clear(&co_hold);
-        // dumbdelay(0x80000);
-        // ggpio_clear(&fxs_to_coin_1)
         usbd_poll(usbd_dev);
         if (ct_offhook(ch)) {
             while (ct_offhook(ch)) {

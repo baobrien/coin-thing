@@ -16,7 +16,9 @@
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [],
+            "defines": [
+                "STM32F0"
+            ],
             "compilerPath": "/usr/bin/arm-none-eabi-gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",

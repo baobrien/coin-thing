@@ -1,3 +1,9 @@
 pcb/coin-thingus/gerber/
 pcb/coin-thingus/fp-info-cache
 *-bak
+*.o
+*.d
+*.map
+*.size
+*.elf
+*.bin
