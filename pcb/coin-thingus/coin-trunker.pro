@@ -1,4 +1,4 @@
-update=Sat 20 Mar 2021 10:38:37 PM PDT
+update=Wed 24 Mar 2021 09:03:00 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -32,7 +32,7 @@ AllowMicroVias=0
 AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
-MinTrackWidth=0.1524
+MinTrackWidth=0.127
 MinViaDiameter=0.6095999999999999
 MinViaDrill=0.381
 MinMicroViaDiameter=0.2
@@ -256,6 +256,17 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
+Name=HVSide
+Clearance=0.1524
+TrackWidth=0.2032
+ViaDiameter=0.6096
+ViaDrill=0.381
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/2]
 Name=Power
 Clearance=0.254
 TrackWidth=0.381

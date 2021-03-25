@@ -1238,7 +1238,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 4350 10300 4350
 Text Notes 9150 4550 0    50   ~ 0
-Blinkinlights
+Blinkenlights
 Text Label 10300 3850 2    50   ~ 0
 COIN_TEST_RELAY
 Text Label 10300 4100 2    50   ~ 0
