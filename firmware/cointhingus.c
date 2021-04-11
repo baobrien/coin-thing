@@ -11,8 +11,8 @@
 
 void ct_ch_default(cointhing_channel * ch)
 {
-    ggpio_set(&(ch->phone_co_test));  // Phone->CO
-    ggpio_clear(&(ch->ct->coin_tc_voltage));
+    ggpio_clear(&(ch->phone_co_test));  // Phone->CO
+    ggpio_set(&(ch->ct->coin_tc_voltage));
     ggpio_clear(&(ch->ct->coin_tc_polarity));
     delayms(ch->ct->relay_delay_ms);
     ct_co_unhold(ch);
@@ -32,8 +32,8 @@ void ct_init_cointhingusv1(cointhing * ct, ggpio_dev * tca9534)
     ggpio_direction(&(ct->enable_hv), GGPIO_DIR_OUTPUT);
 
     ct->relay_delay_ms = 10;
-    ct->hvsupply_powerup = 250;
-    ct->coin_test_time = 1;
+    ct->hvsupply_powerup = 100;
+    ct->coin_test_time = 10;
     ct->coin_rc_time = 250;
 
     cointhing_channel *ch = &ct->channels[0];
@@ -49,7 +49,6 @@ void ct_init_cointhingusv1(cointhing * ct, ggpio_dev * tca9534)
     ggpio_direction(&(ch->offhook_fwd), GGPIO_DIR_INPUT);
     ggpio_direction(&(ch->offhook_rev), GGPIO_DIR_INPUT);
     ct_ch_default(ch);
-    // ggpio_tca9534_set_invert(&(ch->phone_co_test), true);
 }
 
 void ct_hvpsu_enable(cointhing * ct)
@@ -69,11 +68,11 @@ void ct_hvpsu_disable(cointhing * ct)
 static bool ct_do_coin_thing(cointhing_channel * ch, bool dotest, bool polarity)
 {
     bool rv = true;
-    ggpio_write(&(ch->ct->coin_tc_voltage), dotest);  // Set low voltage for coin test;
+    ggpio_write(&(ch->ct->coin_tc_voltage), !dotest);  // Set low voltage for coin test;
     ggpio_write(&(ch->ct->coin_tc_polarity), polarity); // Positive coin test volate for coin present/stuck
 
     ct_co_hold(ch);             // Hold the CO on hook while we do the coin check
-    ggpio_clear(&(ch->phone_co_test));  // Hook phone up to test/collect voltage
+    ggpio_set(&(ch->phone_co_test));  // Hook phone up to test/collect voltage
     delayms(ch->ct->relay_delay_ms);  // Relay settling
     if (dotest) {
         delayms(ch->ct->coin_test_time);  // Wait before testing
@@ -82,8 +81,8 @@ static bool ct_do_coin_thing(cointhing_channel * ch, bool dotest, bool polarity)
     } else {
         delayms(ch->ct->coin_rc_time);
     }
-    ggpio_set(&(ch->phone_co_test));
-    ggpio_clear(&(ch->ct->coin_tc_voltage));
+    ggpio_clear(&(ch->phone_co_test));
+    ggpio_set(&(ch->ct->coin_tc_voltage));
     ggpio_clear(&(ch->ct->coin_tc_polarity));
     delayms(ch->ct->relay_delay_ms);  // Relay settling
     ct_co_unhold(ch);
@@ -136,7 +135,7 @@ void ct_co_unhold(cointhing_channel * ch)
 void ct_ch_hangup(cointhing_channel * ch)
 {
     ggpio_clear(&(ch->co_oh_hold)); // Unhold CO line
-    ggpio_clear(&(ch->phone_co_test));
+    ggpio_set(&(ch->phone_co_test));
     delayms(1000);
     ct_ch_default(ch);
 }

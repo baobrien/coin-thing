@@ -133,7 +133,7 @@ void ggpio_init_tca9534(ggpio_dev * dev, uint32_t i2cdev, uint8_t i2caddr)
     dev->devstate[TCA9534_REG_OUT] = 0xFF;
     tca9534_write_reg(dev, TCA9534_REG_OUT, 0xFF);
     dev->devstate[TCA9534_REG_POL] = 0;
-    tca9534_write_reg(dev, TCA9534_REG_POL, 0);
+    tca9534_write_reg(dev, TCA9534_REG_POL, 0x00);
     dev->devstate[TCA9534_REG_DIR] = 0xFF;
     tca9534_write_reg(dev, TCA9534_REG_DIR, 0xFF);
 }

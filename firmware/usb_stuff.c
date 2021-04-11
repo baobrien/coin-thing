@@ -222,6 +222,11 @@ static void cdcacm_data_rx_cb(usbd_device * usbd_dev, uint8_t ep)
     int len = usbd_ep_read_packet(usbd_dev, 0x01, buf, 64);
 
     if (len) {
+        for (int n = 0; n < len; n++) {
+            if (buf[n] > 0x61 && buf[n] < 0x7E) {
+                buf[n] -= 0x20;
+            }
+        }
         usbd_ep_write_packet(usbd_dev, 0x82, buf, len);
     }
 }

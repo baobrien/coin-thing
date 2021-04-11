@@ -51,9 +51,20 @@ int main(void)
     cointhing coin;
     cointhing_channel *ch;
     ct_init_cointhingusv1(&coin, &tca9534);
+    ct_hvpsu_disable(&coin);
     ch = &coin.channels[0];
 
-    
+    // while(1) {
+    //     ct_collect(ch);
+    //     delayms(1000);
+    //     ct_return(ch);
+    //     delayms(1000);
+    //     ct_test_minrate(ch);
+    //     delayms(1000);
+    //     ct_test_present(ch);
+    //     delayms(1000);
+    // }
+
     while (1) {
         usbd_poll(usbd_dev);
         if (ct_offhook(ch)) {
@@ -61,14 +72,18 @@ int main(void)
                 usbd_poll(usbd_dev);
             }
             delayms(30);
-            while (ct_offhook(ch)) {
+            while (ct_offhook(ch) == PHONE_OFFHOOK_FWD) {
                 usbd_poll(usbd_dev);
             }
-            if (ct_test_minrate(ch)) {
-                ct_collect(ch);
-            } else {
-                ct_return(ch);
+            ct_hvpsu_enable(&coin);
+            if (ct_test_present(ch)) {
+                if (ct_test_minrate(ch)) {
+                    ct_return(ch);
+                } else {
+                    ct_collect(ch);
+                }
             }
+            ct_hvpsu_disable(&coin);
         }
     }
 
