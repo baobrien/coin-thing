@@ -7,3 +7,4 @@ pcb/coin-thingus/fp-info-cache
 *.size
 *.elf
 *.bin
+gerber.zip
